@@ -21,15 +21,6 @@ fetchSheet
 `;
       })
     document.querySelector("#header-app").innerHTML = imageUrld
-    $("#header-app").slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      pauseOnHover: false,
-    });
   });
 
 fetchSheet

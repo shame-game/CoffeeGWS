@@ -40,10 +40,10 @@ $(function() {
         var scroll = $(window).scrollTop();
         if (scroll < 20) {
             $(".header_navbar").removeClass("sticky");
-            $(".header_navbar img").attr("src", "assets/images/dsh.png");
+            $(".header_navbar img").attr("src", "https://lh3.googleusercontent.com/d/1uT-nW6u4UGz7Kv2YidsLct_dunpy_1WP");
         } else {
             $(".header_navbar").addClass("sticky");
-            $(".header_navbar img").attr("src", "assets/images/dsh.png");
+            $(".header_navbar img").attr("src", "https://lh3.googleusercontent.com/d/1uT-nW6u4UGz7Kv2YidsLct_dunpy_1WP");
         }
     });
     
