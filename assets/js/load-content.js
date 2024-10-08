@@ -110,7 +110,7 @@ fetchSheet
           -webkit-box-orient: vertical;
           overflow: hidden;
           text-align: justify">${row.row2}</p>
-          <a class="onclick">Mua ngay</a>
+          <a class="onclick">Đăng ký</a>
         </div>
       </div>
     </div>`;
@@ -196,7 +196,7 @@ fetchSheet
           -webkit-box-orient: vertical;
           overflow: hidden;
           text-align: justify">${row.row2}</p>
-          <a class="onclick">Mua ngay</a>
+          <a class="onclick">Đăng ký</a>
         </div>
       </div>
     </div>`;
