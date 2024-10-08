@@ -312,3 +312,13 @@ window.onload = () => {
 var popupCount = 0;
 
 
+document.querySelector('.gui').onclick = async () => {
+  let name = document.querySelector('#formpay #name').value
+  let phone = document.querySelector('#formpay #phone').value
+  let email = document.querySelector('#formpay #email').value
+  let type = document.querySelector('#formpay #type').value
+  let nameh = document.querySelector('#formpay #nameh').value
+  let url = `https://script.google.com/macros/s/AKfycbw4QkBW-VNLSGmWpu-P5a3FaW9yRHKuSOshnOPlVgNa-z9NsFE3-lJxJRLfLBXeUJgz/exec?name=${name}&phone=${phone}&email=${email}&type=${type}&nameh=${nameh}`
+  const responses = await fetch(url, { method: 'GET' })
+  if (responses.ok) console.log('hello');
+}

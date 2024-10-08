@@ -490,34 +490,31 @@
         class="bi bi-x-circle clostttt"></i>
       <h1 style="position: relative;z-index: 999;color: #ffffff;">Thông tin khách hàng</h1>
       <div class="ddd"></div>
-      <form style="width: 80%;" id="formpay"
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSelffxAwX1JI6QoPKj0juQWVWQZYBXCLLXfmDXBPf4GCvD52A/formResponse"
-        method="post">
+      <form style="width: 80%;" id="formpay">
         <div class="card" id="section-0">
           <div class="card-body">
             <div class="form-group">
-              <input class="form-control" id="entry.418921827" name="entry.418921827" placeholder="Tên" type="text"
-                required>
+              <input class="form-control" id="name" placeholder="Tên" type="text" required>
             </div>
             <div class="form-group">
-              <input class="form-control" id="entry.2017063690" name="entry.2017063690" placeholder='Số điện thoại'
-                type="text" required>
+              <input class="form-control" id="phone" placeholder='Số điện thoại' type="text" required>
             </div>
             <div class="form-group">
-              <input class="form-control" id="entry.495925351" name="entry.495925351" placeholder="Email" type="email">
+              <input class="form-control" id="email" placeholder="Email" type="email">
             </div>
             <div class="form-group">
-              <input class="form-control" id="entry.957613580" name="entry.957613580" placeholder="đăng kí theo diện (cá nhân, nhóm, đoàn,.....): tên đơn vị(nếu có):"
-                rows="2"></input>
+              <input class="form-control" id="type" placeholder="Đăng kí theo diện (cá nhân, nhóm, đoàn,.....):"
+                rows="2" />
             </div>
-            <input class="gui btn btn-primary" type="submit" value="Đăng ký ngay">
+            <div class="form-group">
+              <input class="form-control" id="nameh" placeholder="Tên đơn vị(nếu có):" rows="2" />
+            </div>
+
           </div>
         </div>
-        <div class="form-group d-none">
-          <label for="page-history">Hidden Input</label>
-          <input class="form-control" id="page-history" name="pageHistory" type="text" value="0">
-        </div>
       </form>
+      <button class="gui btn btn-primary" style="z-index: 99;
+    width: 75%;">Đăng ký ngay</button>
     </div>
   </section>
   <!--- FOOTER PART ENDS --->
