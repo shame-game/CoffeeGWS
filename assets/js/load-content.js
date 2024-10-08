@@ -318,7 +318,7 @@ document.querySelector('.gui').onclick = async () => {
   let email = document.querySelector('#formpay #email').value
   let type = document.querySelector('#formpay #type').value
   let nameh = document.querySelector('#formpay #nameh').value
-  let url = `https://script.google.com/macros/s/AKfycbw4QkBW-VNLSGmWpu-P5a3FaW9yRHKuSOshnOPlVgNa-z9NsFE3-lJxJRLfLBXeUJgz/exec?name=${name}&phone=${phone}&email=${email}&type=${type}&nameh=${nameh}`
+  let url = `https://script.google.com/macros/s/AKfycbyfWCW9vvmFVYfY2p_4OyeytRSvfWZxXoHUdDwz7nDM1dnAzo6Pe63f1unrVwMPwp2b/exec?name=${name}&phone=${phone}&email=${email}&type=${type}&nameh=${nameh}`
   const responses = await fetch(url, { method: 'GET' })
   if (responses.ok) console.log('hello');
 }
