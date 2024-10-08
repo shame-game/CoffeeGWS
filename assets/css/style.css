@@ -1489,6 +1489,15 @@ p {
 
 .screenshot_active .slick-active img {
   border-radius: 25px;
+  aspect-ratio: 6/12;
+  object-fit: cover;
+  object-position: center;
+}
+
+.single_slider.slick-slide img {
+  aspect-ratio: 6/12;
+  object-fit: cover;
+  object-position: center;
 }
 
 .screenshot_active .slick-arrow {
