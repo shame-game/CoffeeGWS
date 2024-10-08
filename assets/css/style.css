@@ -1364,7 +1364,6 @@ p {
   position: relative;
   height: 680px;
   margin-top: 80px;
-  margin-bottom: 160px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
