@@ -8,8 +8,8 @@ fetchSheet
   .then((rows) => {
     /*let imageUrl = 'rows[0].imageUrl || "assets/images/header_app.png";'*/
     let imageUrld = ''
-      rows.forEach((row,i) => {
-        imageUrld += `
+    rows.forEach((row, i) => {
+      imageUrld += `
         <div
           class="image wow fadeInRightBig"
           data-wow-duration="1.3s"
@@ -19,7 +19,7 @@ fetchSheet
           <img src="assets/images/dots.svg" alt="dots" class="dots" />
         </div>
 `;
-      })
+    })
     document.querySelector("#header-app").innerHTML = imageUrld
   });
 
@@ -92,7 +92,7 @@ fetchSheet
       timelineHtml += `
       <div class="col-lg-4 col-md-8">
       <div class="single_blog blog_1 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1.3s; animation-delay: 0.2s; animation-name: fadeInUp;">
-        <div class="blog_image">
+        <div class="blog_image" data-content="${row.row5}">
           <img src="${row.row3}" alt="blog">
         </div>
         <div class="blog_content">
@@ -117,6 +117,16 @@ fetchSheet
     });
 
     document.querySelector("#timeline").innerHTML = timelineHtml;
+    document.querySelectorAll('.blog_title').forEach(t => {
+      document.querySelector('#mota').innerText = document.querySelector('.blog_image').getAttribute('data-content')
+      document.querySelector('#titleDetail').innerText = document.querySelector('.blog_title').innerText
+      t.onclick = () => {
+        document.querySelector('#detailJoject').setAttribute('style', 'display:block')
+        document.querySelector('#detailJoject>.backgrounds').onclick = () => {
+          document.querySelector('#detailJoject').setAttribute('style', 'display:none')
+        }
+      }
+    })
     $("#timeline").slick({
       dots: false,
       infinite: true,
@@ -155,6 +165,7 @@ fetchSheet
         },
       ],
     });
+
   });
 fetchSheet
   .fetch({
@@ -192,6 +203,9 @@ fetchSheet
     });
 
     document.querySelector("#timeline1").innerHTML = timelineHtmle;
+
+
+
     $("#timeline1").slick({
       dots: false,
       infinite: true,
@@ -230,82 +244,16 @@ fetchSheet
         },
       ],
     });
+    document.querySelectorAll('.blog_title').forEach(t => {
+      t.onclick = () => {
+        document.querySelector('#detailJoject').setAttribute('style', 'display:block')
+        document.querySelector('#detailJoject>.backgrounds').onclick = () => {
+          document.querySelector('#detailJoject').setAttribute('style', 'display:none')
+        }
+      }
+    })
   });
-fetchSheet
-  .fetch({
-    gSheetId: "1kumk_vYJEM9_nVW_rOD63XF9t3GIVre_5t4DH1V74nY",
-    wSheetName: "luacho",
-  })
-  .then((rows) => {
-    let timelineHtmle = "";
-    rows.forEach((row) => {
-      timelineHtmle += `
-      <div class="col-lg-4 col-md-8">
-      <div class="single_blog blog_1 mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1.3s; animation-delay: 0.2s; animation-name: fadeInUp;">
-        <div class="blog_image">
-          <img src="${row.row3}" alt="blog">
-        </div>
-        <div class="blog_content">
-          <div class="blog_meta d-flex justify-content-between">
-            <div class="meta_date">
-              <span>Giá: ${row.row1}</span>
-            </div>
-            <div class="meta_like"></div>
-          </div>
-          <h4 class="blog_title">
-          <a>${row.row4}</a>
-          </h4>
-          <p style="display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          text-align: justify">${row.row2}</p>
-          <a class="onclick">Mua ngay</a>
-        </div>
-      </div>
-    </div>`;
-    });
 
-    document.querySelector("#timeline2").innerHTML = timelineHtmle;
-    $("#timeline2").slick({
-      dots: false,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      arrows: true,
-      pauseOnHover: false,
-      prevArrow: '<span class="prevv"><i class="bi bi-arrow-left-short"></i></span>',
-      nextArrow:
-        '<span class="nextt"><i class="bi bi-arrow-right-short"></i></span>',
-      responsive: [
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3,
-          },
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 576,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-      ],
-    });
-  });
 fetchSheet
   .fetch({
     gSheetId: "1kumk_vYJEM9_nVW_rOD63XF9t3GIVre_5t4DH1V74nY",
@@ -328,7 +276,7 @@ window.onload = () => {
     document.querySelector('.background').setAttribute('style', 'display:none')
     document.querySelector('.box').setAttribute('style', 'display:none')
     document.querySelector('body').setAttribute('style', 'overflow-y: auto')
-    
+
   })
   document.querySelector('.clostttt').addEventListener('click', () => {
     document.querySelector('.background').setAttribute('style', 'display:none')
@@ -362,3 +310,5 @@ window.onload = () => {
 };
 
 var popupCount = 0;
+
+
